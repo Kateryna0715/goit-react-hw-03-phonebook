@@ -48,7 +48,6 @@ export class App extends Component {
     if (localData) this.setState({ contacts: JSON.parse(localData) });
   }
   componentDidUpdate(_, prevState) {
-    console.log(prevState.contacts);
     if (prevState.contacts) {
       prevState.contacts.length !== this.state.contacts.length &&
         localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
